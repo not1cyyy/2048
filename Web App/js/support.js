@@ -143,7 +143,7 @@ function isWin() {
 function win() {
     for (var i = 0; i < 4; i++) {
         for (var j = 0; j < 3; j++)
-            if (board[i][j] == 16) {
+            if (board[i][j] == 2048) {
                 return true;
             }
     }

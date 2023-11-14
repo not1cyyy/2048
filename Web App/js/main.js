@@ -130,6 +130,7 @@ $(document).keydown(function (event) {
         case 37:  //left
             event.preventDefault();
             if (moveLeft()) {
+                setTimeout("isWin()", 300);
                 setTimeout("generateOneNumber()", 210);
                 setTimeout("isgameover()", 300);
             }
@@ -137,6 +138,7 @@ $(document).keydown(function (event) {
         case 38:  //up
             event.preventDefault();
             if (moveUp()) {
+                setTimeout("isWin()", 300);
                 setTimeout("generateOneNumber()", 210);
                 setTimeout("isgameover()", 300);
             }
@@ -144,6 +146,7 @@ $(document).keydown(function (event) {
         case 39:  //right
             event.preventDefault();
             if (moveRight()) {
+                setTimeout("isWin()", 300);
                 setTimeout("generateOneNumber()", 210);
                 setTimeout("isgameover()", 300);
             }
@@ -151,6 +154,7 @@ $(document).keydown(function (event) {
         case 40:   //down
             event.preventDefault();
             if (moveDown()) {
+                setTimeout("isWin()", 300);
                 setTimeout("generateOneNumber()", 210);
                 setTimeout("isgameover()", 300);
             }
@@ -187,12 +191,14 @@ document.addEventListener('touchend', function (event) {
             if (moveRight()) {
                 setTimeout("generateOneNumber()", 210);
                 setTimeout("isgameover()", 300);
+                setTimeout("isWin()", 300);
             }
 
         } else {
             if (moveLeft()) {
                 setTimeout("generateOneNumber()", 210);
                 setTimeout("isgameover()", 300);
+                setTimeout("isWin()", 300);
             }
 
         }
@@ -201,6 +207,7 @@ document.addEventListener('touchend', function (event) {
             if (moveDown()) {
                 setTimeout("generateOneNumber()", 210);
                 setTimeout("isgameover()", 300);
+                setTimeout("isWin()", 300);
             }
 
         } else {
@@ -208,6 +215,7 @@ document.addEventListener('touchend', function (event) {
             if (moveUp()) {
                 setTimeout("generateOneNumber()", 210);
                 setTimeout("isgameover()", 300);
+                setTimeout("isWin()", 300);
             }
 
         }

@@ -55,6 +55,7 @@ function canMoveLeft(board) {
                 if (board[i][j - 1] == 0 || board[i][j - 1] == board[i][j])
                     return true;
         }
+
     }
     return false;
 }
@@ -131,10 +132,35 @@ function gameover() {
     alert("You Lost!");
 }
 
+function isWin() {
+    if (win()) {
+        alert("You Won!");
+    }
+
+}
+
+
+function win() {
+    for (var i = 0; i < 4; i++) {
+        for (var j = 0; j < 3; j++)
+            if (board[i][j] == 16) {
+                return true;
+            }
+    }
+
+    return false;
+}
+
+
 function moveLeft() {
     if (!canMoveLeft(board)) {
         return false;
     }
+
+    if (win()) {
+        return false;
+    }
+
     for (var i = 0; i < 4; i++) {
         for (var j = 1; j < 4; j++) {
             if (board[i][j] != 0) {
@@ -169,6 +195,12 @@ function moveUp() {
     if (!canMoveUp(board)) {
         return false;
     }
+
+    if (win()) {
+        return false;
+    }
+
+
     for (var i = 1; i < 4; i++) {
         for (var j = 0; j < 4; j++) {
             if (board[i][j] != 0) {
@@ -203,6 +235,12 @@ function moveRight() {
     if (!canMoveRight(board)) {
         return false;
     }
+
+    if (win()) {
+        return false;
+    }
+
+
     for (var i = 0; i < 4; i++) {
         for (var j = 2; j > -1; j--) {
             if (board[i][j] != 0) {
@@ -237,6 +275,12 @@ function moveDown() {
     if (!canMoveDown(board)) {
         return false;
     }
+
+    if (win()) {
+        return false;
+    }
+
+
     for (var i = 2; i > -1; i--) {
         for (var j = 0; j < 4; j++) {
             if (board[i][j] != 0) {
@@ -267,9 +311,6 @@ function moveDown() {
     return true;
 }
 
-function share() {
-    alert("Share!");
-}
 
 function help() {
     alert("Use the arrow keys to move the tiles !");

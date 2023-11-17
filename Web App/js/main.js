@@ -130,32 +130,32 @@ $(document).keydown(function (event) {
         case 37:  //left
             event.preventDefault();
             if (moveLeft()) {
-                setTimeout("isWin()", 300);
                 setTimeout("generateOneNumber()", 210);
+                setTimeout("isWin()", 300);
                 setTimeout("isgameover()", 300);
             }
             break;
         case 38:  //up
             event.preventDefault();
             if (moveUp()) {
-                setTimeout("isWin()", 300);
                 setTimeout("generateOneNumber()", 210);
+                setTimeout("isWin()", 300);
                 setTimeout("isgameover()", 300);
             }
             break;
         case 39:  //right
             event.preventDefault();
             if (moveRight()) {
-                setTimeout("isWin()", 300);
                 setTimeout("generateOneNumber()", 210);
+                setTimeout("isWin()", 300);
                 setTimeout("isgameover()", 300);
             }
             break;
         case 40:   //down
             event.preventDefault();
             if (moveDown()) {
-                setTimeout("isWin()", 300);
                 setTimeout("generateOneNumber()", 210);
+                setTimeout("isWin()", 300);
                 setTimeout("isgameover()", 300);
             }
             break;
